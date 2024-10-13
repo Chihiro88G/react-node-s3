@@ -11,9 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/s3-url', async (req, res) => {
-  console.log('inside backend')
   const url = await generateUploadUrl();
-  console.log(url);
   res.send({url});
 });
 
